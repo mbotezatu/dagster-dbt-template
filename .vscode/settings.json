@@ -1,0 +1,4 @@
+{
+    "dbt.sqlFmtPath": ".venv/bin/sqlfmt",
+    "dbt.sqlFmtAdditionalParams": ["--dialect", "duckdb"]
+}

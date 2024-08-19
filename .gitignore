@@ -1,0 +1,21 @@
+# python generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# venv
+.venv
+
+# dagster tmp files
+tmp*/
+
+# env files
+.env
+
+# dbt
+target/
+dbt_packages/
+logs/

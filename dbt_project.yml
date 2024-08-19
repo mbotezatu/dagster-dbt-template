@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/dbt-labs/dbt-jsonschema/main/schemas/dbt_project.json
+
+name: "dagster_dbt_template"
+version: "0.1.0"
+
+profile: "dagster_dbt_template"
+
+model-paths: ["dbt/models"]
+analysis-paths: ["dbt/analyses"]
+test-paths: ["dbt/tests"]
+seed-paths: ["dbt/seeds"]
+macro-paths: ["dbt/macros"]
+snapshot-paths: ["dbt/snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  dagster_dbt_template:
+    example:
+        +materialized: "view"
+
+flags:
+  send_anonymous_usage_stats: false
+  log_path: "target/dbt.log"

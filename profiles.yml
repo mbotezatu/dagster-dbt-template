@@ -1,0 +1,7 @@
+dagster_dbt_template:
+  outputs:
+    dev:
+      type: "duckdb"
+      path: "target/database.duckdb"
+
+  target: "dev"

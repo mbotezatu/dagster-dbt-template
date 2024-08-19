@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/dbt-labs/dbt-jsonschema/main/schemas/latest/dbt_yml_files-latest.json
+
+version: 2
+
+models:
+  - name: "model"
+    description: "An example dbt model"
+    columns:
+      - name: "id"
+        description: "The primary key for this table"
+        data_tests:
+          - "unique"
+          - "not_null"

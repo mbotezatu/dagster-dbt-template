@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+        "ms-python.python",
+        "tamasfe.even-better-toml",
+        "charliermarsh.ruff",
+        "ms-azuretools.vscode-docker",
+        "redhat.vscode-yaml",
+        "innoverio.vscode-dbt-power-user"
+    ]
+}

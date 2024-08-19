@@ -1,0 +1,32 @@
+[project]
+name = "dagster-dbt-template"
+version = "0.1.0"
+description = "A template for a Dagster project that integrates with dbt. Modify it to fit your needs."
+authors = [
+    { name = "Mihai Botezatu", email = "mihai@botezatu.dev" }
+]
+dependencies = [
+    "dagster>=1.8.1",
+    "dagster-dbt>=0.24.1",
+    "dbt-duckdb>=1.8.2",
+]
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">= 3.12"
+
+[tool.rye]
+managed = true
+virtual = true
+dev-dependencies = [
+    "dagster-webserver>=1.8.1",
+    "shandy-sqlfmt[jinjafmt]>=0.23.2",
+]
+
+[tool.rye.scripts]
+dev = { cmd = "dagster dev" }
+
+[tool.dagster]
+module_name = "orchestration"
+
+[tool.sqlfmt]
+dialect = "duckdb"
